@@ -16,6 +16,44 @@
     <title>Natours | Exciting tours for adventurous people</title>
   </head>
   <body>
+    <div class="navigation">
+      <input type="checkbox" class="navigation__checkbox" id="nav-toggle" />
+      <label for="nav-toggle" class="navigation__button"
+        ><span class="navigation__icon">&nbsp;</span></label
+      >
+
+      <div class="navigation__background">&nbsp;</div>
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#section-about" class="navigation__link"
+              ><span>01</span>About Natous</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#section-features" class="navigation__link"
+              ><span>02</span>Your benefits</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#section-tours" class="navigation__link"
+              ><span>03</span>Popular tours</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#section-stories" class="navigation__link"
+              ><span>04</span>Stories</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#section-book" class="navigation__link"
+              ><span>05</span>Book now</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+
     <header class="header">
       <div class="header__logo-box">
         <img src="img/logo-white.png" alt="Logo" class="header__logo" />
@@ -27,13 +65,15 @@
           ><span class="heading-primary--sub">is where life happens</span>
         </h1>
 
-        <a href="#" class="btn btn--white btn--animated">Discover our tours</a>
+        <a href="#section-tours" class="btn btn--white btn--animated"
+          >Discover our tours</a
+        >
       </div>
     </header>
 
     <main>
       <section class="section-about">
-        <div class="u-center-text u-margin-bottom-big">
+        <div class="u-center-text u-margin-bottom-big" id="section-about">
           <h2 class="heading-secondary">
             Exciting tours for adventurous people
           </h2>
@@ -80,7 +120,7 @@
         </div>
       </section>
 
-      <section class="section-features">
+      <section class="section-features" id="section-features">
         <div class="row">
           <div class="col-1-of-4">
             <div class="feature-box">
@@ -133,7 +173,7 @@
       </section>
 
       <section class="section-tours">
-        <div class="u-center-text u-margin-bottom-big">
+        <div class="u-center-text u-margin-bottom-big" id="section-tours">
           <h2 class="heading-secondary">Most Popular Tours</h2>
         </div>
 
@@ -163,7 +203,7 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">$297</p>
                   </div>
-                  <a href="#" class="btn btn--white">Book now!</a>
+                  <a href="#popup" class="btn btn--white">Book now!</a>
                 </div>
               </div>
             </div>
@@ -194,7 +234,7 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">$497</p>
                   </div>
-                  <a href="#" class="btn btn--white">Book now!</a>
+                  <a href="#popup" class="btn btn--white">Book now!</a>
                 </div>
               </div>
             </div>
@@ -225,7 +265,7 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">$897</p>
                   </div>
-                  <a href="#" class="btn btn--white">Book now!</a>
+                  <a href="#popup" class="btn btn--white">Book now!</a>
                 </div>
               </div>
             </div>
@@ -246,7 +286,7 @@
             Your browser is not supported!
           </video>
         </div>
-        <div class="u-center-text u-margin-bottom-big">
+        <div class="u-center-text u-margin-bottom-big" id="section-stories">
           <h2 class="heading-secondary">We make people genuinely happy</h2>
         </div>
 
@@ -304,54 +344,142 @@
           <a href="#" class="btn-text">Read all stories &rarr;</a>
         </div>
       </section>
+
+      <section class="section-book" id="section-book">
+        <div class="row">
+          <div class="book">
+            <div class="book__form">
+              <form action="#" class="form">
+                <div class="u-margin-bottom-medium">
+                  <h2 class="heading-secondary">Start booking now</h2>
+                </div>
+
+                <div class="form__group">
+                  <input
+                    type="text"
+                    class="form__input"
+                    placeholder="Full Name"
+                    id="name"
+                    required
+                  />
+                  <label for="name" class="form__label">Full name</label>
+                </div>
+
+                <div class="form__group">
+                  <input
+                    type="email"
+                    class="form__input"
+                    placeholder="Email Address"
+                    id="email"
+                    required
+                  />
+                  <label for="email" class="form__label">Email Address</label>
+                </div>
+
+                <div class="form__group">
+                  <div class="form__radio-group u-margin-bottom-medium">
+                    <input
+                      type="radio"
+                      class="form__radio-input"
+                      id="small"
+                      name="tour-size"
+                    />
+                    <label for="small" class="form__radio-label">
+                      <span class="form__radio-button"></span>
+                      Small tour group
+                    </label>
+                  </div>
+
+                  <div class="form__radio-group">
+                    <input
+                      type="radio"
+                      class="form__radio-input"
+                      id="large"
+                      name="tour-size"
+                    />
+                    <label for="large" class="form__radio-label">
+                      <span class="form__radio-button"></span>
+                      large tour group
+                    </label>
+                  </div>
+                </div>
+                <div class="form__group">
+                  <button class="btn btn--green">Next Step &rarr;</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <!--
-    <section class="grid-test">
-      <div class="row">
-        <div class="col-1-of-2">Col 1 of 2</div>
-
-        <div class="col-1-of-2">Col 2 of 2</div>
+    <footer class="footer">
+      <div class="footer__logo-box u-margin-bottom-big">
+        <img
+          src="img/logo-green-2x.png"
+          alt="Full logo-green-2x"
+          class="footer__logo"
+        />
       </div>
-
       <div class="row">
-        <div class="col-1-of-3">Col 1 of 3</div>
-
-        <div class="col-1-of-3">Col 2 of 3</div>
-
-        <div class="col-1-of-3">Col 3 of 3</div>
+        <div class="col-1-of-2">
+          <div class="footer__navigation">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#" class="footer__link">Company</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Contact us</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Careers</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Privacy policy</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Terms</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-1-of-2">
+          <p class="footer__copyright">
+            Built my <a href="#" class="footer__link">Jonas Schmedtmann</a> for
+            his Avanced CSS and Sass online course.
+          </p>
+        </div>
       </div>
+    </footer>
 
-      <div class="row">
-        <div class="col-1-of-3">Col 1 of 3</div>
-
-        <div class="col-2-of-3">Col 2 and 3 of 3</div>
+    <div class="popup" id="popup">
+      <div class="popup__content">
+        <div class="popup__left">
+          <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img" />
+          <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img" />
+        </div>
+        <div class="popup__right">
+          <a href="#section-tours" class="popup__close">&times;</a>
+          <h2 class="heading-secondary u-margin-bottom-small">
+            Start booking now
+          </h2>
+          <h3 class="heading-tertiary u-margin-bottom-small">
+            Important &ndash; Please read these terms before booking.
+          </h3>
+          <p class="popup__text u-margin-bottom-medium">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem quia
+            voluptatibus error illo culpa delectus beatae molestias
+            exercitationem earum! Facere labore corporis animi mollitia pariatur
+            laborum architecto iste ad! Lorem ipsum dolor sit, amet consectetur
+            adipisicing elit. Autem quia voluptatibus error illo culpa delectus
+            beatae molestias exercitationem earum! Facere labore corporis animi
+            mollitia pariatur laborum architecto iste ad culpa delectus beatae
+            molestias exercitationem earum Facere labore corporis animi mollitia
+            pariatur laborum architecto iste!
+          </p>
+          <a href="" class="btn btn--green">Book now</a>
+        </div>
       </div>
-
-      <div class="row">
-        <div class="col-1-of-4">Col 1 of 4</div>
-
-        <div class="col-1-of-4">Col 2 of 4</div>
-
-        <div class="col-1-of-4">Col 3 of 4</div>
-
-        <div class="col-1-of-4">Col 4 of 4</div>
-      </div>
-
-      <div class="row">
-        <div class="col-1-of-4">Col 1 of 4</div>
-
-        <div class="col-1-of-4">Col 2 of 4</div>
-
-        <div class="col-2-of-4">Col 3 and 4 of 4</div>
-      </div>
-
-      <div class="row">
-        <div class="col-1-of-4">Col 1 of 4</div>
-
-        <div class="col-3-of-4">Col 2, 3 and 4 of 4</div>
-      </div>
-    </section>
-    -->
+    </div>
   </body>
 </html>
