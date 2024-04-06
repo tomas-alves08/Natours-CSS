@@ -22,12 +22,24 @@
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.5);
     transition: all 0.4s 0.2s;
+
+    @include respond(phone) {
+      height: 95%;
+      width: 95%;
+    }
   }
 
   &__left {
     width: 33.33333%;
     display: table-cell;
     vertical-align: middle;
+
+    @include respond(phone) {
+      display: flex;
+      position: absolute;
+      right: 50%;
+      bottom: 5rem;
+    }
   }
 
   &__right {
@@ -35,6 +47,11 @@
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
+
+    @include respond(phone) {
+      width: 100%;
+      vertical-align: top;
+    }
   }
 
   &__img {
@@ -57,6 +74,16 @@
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto;
+
+    @include respond(phone) {
+      -moz-column-count: 1;
+      -moz-column-gap: none;
+      -moz-column-rule: none;
+
+      column-count: 1;
+      column-gap: none;
+      column-rule: none;
+    }
   }
 
   &:target {
